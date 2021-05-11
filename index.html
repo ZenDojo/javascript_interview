@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //Q1
+        // let a = {},
+        //     b = '0',
+        //     c = 0;
+        // a[b] = 'google'
+        // a[c] = 'chrome'
+        // console.log(a[b]);
+        //chrome
+
+        //Q2
+        // let a = {}
+        // let b = Symbol('1')
+        // let c = Symbol('1')
+        // a[b] = 'google'
+        // a[c] = 'chrome'
+        // console.log(a[b]);
+        // google
+
+        //Q3
+        // let a = {},
+        //     b = {
+        //         n: '1'
+        //     },
+        //     c = {
+        //         m: '2'
+        //     }
+        // a[b] = 'google'
+        // a[c] = 'chrome'
+        // console.log(a[b]);
+        // console.log(b.toString());
+        // chrome
+
+        //Q4
+        // var test = (function (i) {
+        //     return function () {
+        //         console.log((i *= 2))
+        //     }
+        // })(2)
+        // test(5)
+        //4
+
+        //Q5
+        // var a = 0,
+        //     b = 0
+        // function A(a) {
+        //     A = function (b) {
+        //         alert(a + b++)
+        //     }
+        //     alert(a++)
+        // }
+        // A(1)
+        // A(2)
+        //1
+        //4
+
+        //Q6 deepClone
+        function deepClone(aObject) {
+            if (!aObject) {
+                return aObject
+            }
+            let v
+            let bObject = Array.isArray(aObject) ? [] : {}
+            for (const k in object) {
+                v = aObject[k]
+                bObject[k] = (typeof v === 'object' ? deepClone(v) : v)
+            }
+            return bObject
+        }
+
+
+    </script>
+</body>
+
+</html>
